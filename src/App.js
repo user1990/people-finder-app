@@ -10,7 +10,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      contacts: []
+      contacts: [],
+      checked: false
     };
   }
 
@@ -25,9 +26,9 @@ class App extends Component {
         location: {
           street: user.location.street,
           city: user.location.city,
-          state: user.location.state,
-          postcode: user.location.postcode
-        }
+          state: user.location.state
+        },
+        gender: user.gender
       }
     )))
     .then(contacts => this.setState({contacts}))

@@ -39,3 +39,9 @@ input[type="search"]:hover, input[type="search"]:focus  {
   background-color: #93c8e6;
   cursor: pointer;
 }
+
+.checkbox {
+  display: flex;
+  padding-left: 10px;
+  max-width: 100px;
+}

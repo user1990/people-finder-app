@@ -3,8 +3,15 @@ import React, { Component } from 'react';
 import SearchBar from './SearchBar';
 import ContactsList from './ContactsList';
 import Loader from './Loader/Loading';
+import Checkbox from 'material-ui/Checkbox';
 // Styles
 import '../styles/Contacts.css';
+
+const styles = {
+  checkbox: {
+    marginBottom: 16,
+  }
+};
 
 @Loader('contacts')
 class Contacts extends Component {
@@ -25,6 +32,17 @@ class Contacts extends Component {
         filterText={this.state.filterText}
         onUserInput={this.handleUserInput}
         />
+        <h4>Filter by genre:</h4>
+        <div className='checkbox'>
+          <Checkbox
+            label="Male"
+            style={styles.checkbox}
+          />
+          <Checkbox
+            label="Female"
+            style={styles.checkbox}
+          />
+        </div>
         <p>Loading time {loadingTime} seconds</p>
         <ContactsList
           contacts={this.props.contacts}
