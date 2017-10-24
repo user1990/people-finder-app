@@ -1,4 +1,4 @@
-# funny-chuck
+# People Finder
 
 A simple people contacts searching application builded with [RANDOM USER GENERATOR](https://randomuser.me/) API using React.js, Material-UI.
 
